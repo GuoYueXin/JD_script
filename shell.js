@@ -52,6 +52,7 @@ setInterval(() => {
       // 签到
       if (minute === 5) {
         shell.exec('node jd_bean_sign.js');
+        shell.exec('node 52pj_sign.js');
       }
 
       // 进店领豆
