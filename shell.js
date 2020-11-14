@@ -2,6 +2,7 @@ const shell = require('shelljs');
 const dayjs = require('dayjs');
 const notify = require('./sendNotify');
 
+notify.sendNotify('叮咚！', '脚本开始执行啦');
 
 setInterval(() => {
   const hour = dayjs().hour();
@@ -33,9 +34,7 @@ setInterval(() => {
     if (hour === 11 && minute === 8) {
       shell.exec('node jd_rankingList.js');
     }
-    if (hour === 0 && minute === 9) {
-      shell.exec('node jd_shop.js');
-    }
+    
     if (hour % 5 === 1 && minute === 11) {
       shell.exec('node jd_superMarket.js');
     }
@@ -44,26 +43,46 @@ setInterval(() => {
       shell.exec('node jd_pet.js');
     }
   
-    if (hour === 12 && minute === 0) {
-      shell.exec('node jd_beanCoin.js');
-    }
+    if (hour === 0) {
+      // 京小超兑换奖品
+      if (minute === 0) {
+        shell.exec('node jd_blueCoin.js');
+      }
+
+      // 签到
+      if (minute === 5) {
+        shell.exec('node jd_bean_sign.js');
+      }
+
+      // 进店领豆
+      if (minute === 9) {
+        shell.exec('node jd_shop.js');
+      }
+
+      // 摇京豆
+      if (minute === 15) {
+        shell.exec('node jd_club_lottery.js');  
+      }
+
+      // 京豆变化
+      if (minute === 30) {
+        shell.exec('node jd_bean_change.js');
+      }
+
+      // 全民开红包
+      if (minute === 58) {
+        shell.exec('node jd_redPacket.js');
+      }
   
-    if (hour === 12 && minute === 3) {
-      shell.exec('node jd_redPacket.js');
     }
-    if (hour === 12 && minute === 5) {
+
+    // 京东抽奖机
+    if (hour === 1 && minute === 8) {
       shell.exec('node jd_lotteryMachine.js');
     }
   
-    if (hour === 12 && minute === 8) {
-      // 摇京豆
-      shell.exec('node jd_club_lottery.js');  
-    }
-  
-    if (hour === 12 && minute === 15) {
-      // 摇京豆
-      shell.exec('node jd_bean_sign.js'); 
-    }
+    
+
   
     if (hour === 16 && minute === 10) {
       shell.exec('node jd_unsubscribe.js');
@@ -74,4 +93,4 @@ setInterval(() => {
   }
 
 
-}, 1000 * 60);
+}, 1000 * 50);
