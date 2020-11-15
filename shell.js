@@ -2,7 +2,6 @@ const shell = require('shelljs');
 const dayjs = require('dayjs');
 const notify = require('./sendNotify');
 
-notify.sendNotify('叮咚！', '脚本开始执行啦');
 
 setInterval(() => {
   const hour = dayjs().hour();
@@ -94,4 +93,4 @@ setInterval(() => {
   }
 
 
-}, 1000 * 50);
+}, 1000 * 60);
