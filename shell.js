@@ -21,7 +21,7 @@ setInterval(() => {
       shell.exec('node jd_joy.js');
     }
     if ([0,8,16].includes(hour) && minute === 0) {
-      shell.exec('node jd_reward.js');
+      shell.exec('node jd_joy_reward.js');
     }
     if ([1,4,7,10,13,16,19,22].includes(hour) && minute === 7) {
       shell.exec('node jd_mohe.js');
