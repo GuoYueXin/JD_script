@@ -42,7 +42,7 @@ setInterval(() => {
       shell.exec('node jd_pet.js');
     }
   
-    if (hour === 0) {
+    if (hour === 14) {
       // 京小超兑换奖品
       if (minute === 0) {
         shell.exec('node jd_blueCoin.js');
