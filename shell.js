@@ -42,39 +42,39 @@ setInterval(() => {
       shell.exec('node jd_pet.js');
     }
   
-    if (hour === 1) {
-      // 京小超兑换奖品
-      if (minute === 0) {
-        shell.exec('node jd_blueCoin.js');
-      }
+    // if (hour === 1) {
+    //   // 京小超兑换奖品
+    //   if (minute === 0) {
+    //     shell.exec('node jd_blueCoin.js');
+    //   }
 
-      // 签到
-      if (minute === 5) {
-        shell.exec('node jd_bean_sign.js');
-        shell.exec('node 52pj_sign.js');
-      }
+    //   // 签到
+    //   if (minute === 5) {
+    //     shell.exec('node jd_bean_sign.js');
+    //     shell.exec('node 52pj_sign.js');
+    //   }
 
-      // 进店领豆
-      if (minute === 9) {
-        shell.exec('node jd_shop.js');
-      }
+    //   // 进店领豆
+    //   if (minute === 9) {
+    //     shell.exec('node jd_shop.js');
+    //   }
 
-      // 摇京豆
-      if (minute === 15) {
-        shell.exec('node jd_club_lottery.js');  
-      }
+    //   // 摇京豆
+    //   if (minute === 15) {
+    //     shell.exec('node jd_club_lottery.js');  
+    //   }
 
-      // 京豆变化
-      if (minute === 30) {
-        shell.exec('node jd_bean_change.js');
-      }
+    //   // 京豆变化
+    //   if (minute === 30) {
+    //     shell.exec('node jd_bean_change.js');
+    //   }
 
-      // 全民开红包
-      if (minute === 58) {
-        shell.exec('node jd_redPacket.js');
-      }
+    //   // 全民开红包
+    //   if (minute === 58) {
+    //     shell.exec('node jd_redPacket.js');
+    //   }
   
-    }
+    // }
 
     // 京东抽奖机
     if (hour === 1 && minute === 8) {
