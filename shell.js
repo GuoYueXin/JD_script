@@ -11,6 +11,9 @@ setInterval(() => {
       shell.exec('node jd_daily_egg.js');
       shell.exec('node jd_joy_feedPets.js');
     }
+    if (minute === 18) {
+      shell.exec('node jd_pigPet.js');
+    }
     if ([6, 12, 18].includes(hour) && minute === 3) {
       shell.exec('node jd_fruit.js');
     }
