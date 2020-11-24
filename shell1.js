@@ -29,6 +29,10 @@ setInterval(() => {
         shell.exec('node jd_club_lottery.js');  
       }
 
+      if (minute === 20) {
+        shell.exec('node jd_small_home.js');
+      }
+
       // 京豆变化
       if (minute === 30) {
         shell.exec('node jd_bean_change.js');
@@ -39,6 +43,9 @@ setInterval(() => {
         shell.exec('node jd_redPacket.js');
       }
   
+    }
+    if ((hour === 0 || hour === 20) && minute === 9) {
+      shell.exec('node jd_necklace.js');
     }
   } catch (e) {
     console.log('脚本执行出错', e);
