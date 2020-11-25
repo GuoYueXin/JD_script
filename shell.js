@@ -9,7 +9,7 @@ setInterval(() => {
   try {
 
     if (minute === 1) {
-      notify.sendNotify('系统运行正常');
+      notify.sendNotify('系统运行正常', '');
     }
 
     if (minute === 40) {
