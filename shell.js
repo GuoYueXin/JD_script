@@ -7,6 +7,11 @@ setInterval(() => {
   const hour = dayjs().hour();
   const minute = dayjs().minute();
   try {
+
+    if (minute === 1) {
+      notify.sendNotify('系统运行正常');
+    }
+
     if (minute === 40) {
       shell.exec('node jd_daily_egg.js');
       shell.exec('node jd_joy_feedPets.js');
