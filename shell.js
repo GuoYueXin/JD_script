@@ -11,22 +11,8 @@ setInterval(() => {
     if (minute === 1) {
       notify.sendNotify('系统运行正常', '');
     }
-
-    if (minute === 40) {
-      shell.exec('node jd_daily_egg.js');
-      shell.exec('node jd_joy_feedPets.js');
-    }
-    if (minute === 18) {
-      shell.exec('node jd_pigPet.js');
-    }
     if ([6, 12, 18].includes(hour) && minute === 3) {
       shell.exec('node jd_fruit.js');
-    }
-    if (hour % 2 === 0 && minute === 10) {
-      shell.exec('node jd_moneyTree.js');
-    }
-    if (hour % 2 === 0 && minute === 8) {
-      shell.exec('node jd_joy.js');
     }
     if ([0,8,16].includes(hour) && minute === 0) {
       shell.exec('node jd_joy_reward.js');
@@ -50,51 +36,11 @@ setInterval(() => {
       shell.exec('node jd_pet.js');
     }
   
-    // if (hour === 1) {
-    //   // 京小超兑换奖品
-    //   if (minute === 0) {
-    //     shell.exec('node jd_blueCoin.js');
-    //   }
-
-    //   // 签到
-    //   if (minute === 5) {
-    //     shell.exec('node jd_bean_sign.js');
-    //     shell.exec('node 52pj_sign.js');
-    //   }
-
-    //   // 进店领豆
-    //   if (minute === 9) {
-    //     shell.exec('node jd_shop.js');
-    //   }
-
-    //   // 摇京豆
-    //   if (minute === 15) {
-    //     shell.exec('node jd_club_lottery.js');  
-    //   }
-
-    //   // 京豆变化
-    //   if (minute === 30) {
-    //     shell.exec('node jd_bean_change.js');
-    //   }
-
-    //   // 全民开红包
-    //   if (minute === 58) {
-    //     shell.exec('node jd_redPacket.js');
-    //   }
-  
-    // }
-
     // 京东抽奖机
     if (hour === 1 && minute === 8) {
       shell.exec('node jd_lotteryMachine.js');
     }
   
-    
-
-  
-    if (hour === 16 && minute === 10) {
-      shell.exec('node jd_unsubscribe.js');
-    }
   } catch (e) {
     console.log('脚本执行出错', e);
     notify.sendNotify('脚本执行出错啦！', `错误信息如下：${e}`);

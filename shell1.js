@@ -47,6 +47,11 @@ setInterval(() => {
     if ((hour === 0 || hour === 20) && minute === 9) {
       shell.exec('node jd_necklace.js');
     }
+
+    // 京东抽奖机
+    if (hour === 1 && minute === 8) {
+      shell.exec('node jd_lotteryMachine.js');
+    }
   } catch (e) {
     console.log('脚本执行出错', e);
     notify.sendNotify('脚本执行出错啦！', `错误信息如下：${e}`);
