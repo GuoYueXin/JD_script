@@ -1,0 +1,22 @@
+{
+  "scripts": [
+    {
+      "name": "shell",
+      "script": "shell.js",
+      "watch": true,
+      "cron_restart": "0 0  3,10,17,23 * * ?"
+    },
+    {
+      "name": "shell1",
+      "script": "shell1.js",
+      "watch": true,
+      "cron_restart": "0 0  3,10,17,23 * * ?"
+    },
+    {
+      "name": "shell2",
+      "script": "shell2.js",
+      "watch": true,
+      "cron_restart": "0 0  3,10,17,23 * * ?"
+    }
+  ]
+}
