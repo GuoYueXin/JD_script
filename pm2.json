@@ -2,20 +2,23 @@
   "scripts": [
     {
       "name": "shell",
-      "script": "shell.js",
+      "script": "./shell.js",
       "watch": true,
+      "exec_mode": "cluster_mode",
       "cron_restart": "0 0  3,10,17,23 * * ?"
     },
     {
       "name": "shell1",
-      "script": "shell1.js",
+      "script": "./shell1.js",
       "watch": true,
+      "exec_mode": "cluster_mode",
       "cron_restart": "0 0  3,10,17,23 * * ?"
     },
     {
       "name": "shell2",
-      "script": "shell2.js",
+      "script": "./shell2.js",
       "watch": true,
+      "exec_mode": "cluster_mode",
       "cron_restart": "0 0  3,10,17,23 * * ?"
     }
   ]
