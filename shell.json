@@ -1,0 +1,10 @@
+{
+  "shell": {
+    "name": "shell",
+    "script": "./shell.js",
+    "watch": true,
+    "ignore_watch": ["node_modules"],
+    "exec_mode": "cluster_mode",
+    "cron_restart": "0 0  3,10,17,23 * * ?"
+  }
+}
