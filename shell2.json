@@ -1,7 +1,7 @@
 {
   "shell2": {
     "name": "shell2",
-    "script": "./shell2.js",
+    "exec": "./shell2.js",
     "watch": true,
     "ignore_watch": ["node_modules"],
     "exec_mode": "cluster_mode",
