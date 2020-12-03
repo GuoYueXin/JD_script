@@ -1,5 +1,5 @@
 {
-  "shell1": {
+  "apps": {
     "name": "shell1",
     "exec": "./shell1.js",
     "watch": true,
