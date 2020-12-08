@@ -24,8 +24,14 @@ setInterval(() => {
     if ([7,11,13,15,17,19, 21].includes(hour) && minute === 5) {
       shell.exec('node jd_plantBean.js');
     }
+
+    if ([0,9,11,13,15,17,19,20,21,23].includes(hour) && minute === 0) {
+      shell.exec('node jd_live_redrain.js');
+    }
+
     if (hour === 11 && minute === 8) {
       shell.exec('node jd_rankingList.js');
+      shell.exec('node jd_syj.js');
     }
     
     if (hour % 5 === 1 && minute === 11) {
@@ -35,10 +41,18 @@ setInterval(() => {
     if (hour >= 6 && hour <=18 && hour % 6 === 0 && minute === 15) {
       shell.exec('node jd_pet.js');
     }
+
+    if (hour === 7 && minute === 0) {
+      shell.exec('node jd_ms_redrain.js');
+    }
   
     // 京东抽奖机
     if (hour === 1 && minute === 8) {
       shell.exec('node jd_lotteryMachine.js');
+    }
+
+    if (hour === 11 && minute === 10) {
+      shell.exec('node jd_kd.js');
     }
   
   } catch (e) {

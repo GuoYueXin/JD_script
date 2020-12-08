@@ -24,6 +24,10 @@ setInterval(() => {
         shell.exec('node jd_shop.js');
       }
 
+      if (minute === 10) {
+        shell.exec('node jd_health.js');
+      }
+
       // 摇京豆
       if (minute === 15) {
         shell.exec('node jd_club_lottery.js');  
