@@ -6,7 +6,6 @@
 let CookieJDs = [
   'pt_key=AAJf1IEYADCSI2jJhtAMDJULFQ1NXHGBPugSP29m9Bp9SOoIijpQzzqUZLEYh5jFsyIpPQqTM4A;pt_pin=13963554913_p',//账号一ck,例:pt_key=XXX;pt_pin=XXX;
   'pt_key=AAJf1IHZADBo8PcflnnHesnS4a66vfPNzeP67gAmE5izRwltnHuFAuZG1dlGOyp9MIopeyIDXRA;pt_pin=jd_6b1ab56f210b5',//账号二ck,例:pt_key=XXX;pt_pin=XXX;如有更多,依次类推
-  'pt_key=AAJftNSLADAm8mO6SyGK-j80be9N41sJMXNCLhVkUfbFBfZIeYWAFVYWpeEN8DVHA0Ef5dH-iww;pt_pin=1956709253-596970',
 ]
 // 判断github action里面是否有京东ck
 if (process.env.JD_COOKIE) {
