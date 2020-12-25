@@ -23,7 +23,10 @@ setInterval(() => {
     }
     
   
-    
+    if (hour === 7 && minute === 11) {
+      shell.exec('node jd_crazy_joy.js');
+      shell.exec('node jd_crazy_joy_coin.js');
+    }
 
   
     if (hour === 16 && minute === 10) {
